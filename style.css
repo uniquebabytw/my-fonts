@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'GirlFont';
+    src: url('./華康少女文字W5.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'ChildWindFont';
+    src: url('./兒風體W4.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'InkFont';
+    src: url('./9.墨字體.ttf') format('truetype');
+}
+
+/* 基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ddebf7;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* LOGO 與標題 */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.title h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.slogan {
+    text-align: right;
+    font-size: 14px;
+}
+
+/* 文字輸入框 */
+.input-area {
+    margin: 20px 0;
+}
+
+input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
+/* 預覽區 */
+.preview-area {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.preview-box {
+    width: 30%;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+.font-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.preview-text {
+    font-size: 24px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 套用不同字型 */
+#previewGirl {
+    font-family: 'GirlFont';
+}
+
+#previewChild {
+    font-family: 'ChildWindFont';
+}
+
+#previewInk {
+    font-family: 'InkFont';
+}
