@@ -67,7 +67,7 @@ input {
 .preview-area {
     display: flex;
     justify-content: space-around;
-    gap: 30px; /* 
+    gap: 30px;
     margin-top: 20px;
 }
 
@@ -78,7 +78,7 @@ input {
     border-radius: 5px;
     border: 2px solid #003366;
     display: flex;
-    flex-direction: column; /* 讓內容上下排列 */
+    flex-direction: column;
     height: 100px;
 }
 
