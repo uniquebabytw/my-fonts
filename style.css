@@ -67,7 +67,7 @@ input {
 .preview-area {
     display: flex;
     justify-content: space-around;
-    gap: 10px;
+    gap: 5px;
     margin-top: 20px;
 }
 
@@ -97,6 +97,11 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.default-text {
+    font-size: 14px; /* 調整「預覽文字」的大小 */
+    color: gray; /* 讓顏色淡一點（可選） */
 }
 
 /* 套用不同字型 */
