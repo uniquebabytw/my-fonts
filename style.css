@@ -67,7 +67,7 @@ input {
 .preview-area {
     display: flex;
     justify-content: space-around;
-    gap: 30px;
+    gap: 15px;
     margin-top: 20px;
 }
 
@@ -85,7 +85,7 @@ input {
 .font-title {
     font-weight: bold;
     font-size: 16px;
-    flex-grow: 1; /* 佔 1/3 高度 */
+    flex-grow: 0.5; /* 佔 1/3 高度 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +93,7 @@ input {
 
 .preview-text {
     font-size: 24px;
-    flex-grow: 2; /* 佔 2/3 高度 */
+    flex-grow: 2.5; /* 佔 2/3 高度 */
     display: flex;
     align-items: center;
     justify-content: center;
