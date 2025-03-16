@@ -1,103 +1,46 @@
-@font-face {
-    font-family: 'GirlFont';
-    src: url('./華康少女文字W5.TTF') format('truetype');
-}
-
-@font-face {
-    font-family: 'ChildWindFont';
-    src: url('./兒風體W4.ttc') format('truetype');
-}
-
-@font-face {
-    font-family: 'InkFont';
-    src: url('./9.墨字體.ttf') format('truetype');
-}
-
-/* 基本樣式 */
+/* 確保頁面無額外空白 */
 body {
-    height: auto; /* 讓 .section1 & .section2 控制高度 */
     margin: 0;
     padding: 0;
+    background-image: url('background2.png'); /* 替換為你的背景圖片 */
+    background-size: cover; /* 讓圖片填滿整個畫面 */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* 讓背景高度固定為視窗大小 */
     display: flex;
-    flex-direction: column;
-    line-height: 0;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 第一張背景圖片 */
-.section1 {
-    width: 100%;
-    height: 100vh;
-    background-image: url('top-image.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;  /* 確保沒有額外的間距 */
-    padding: 0;
-}
-
-/* 第二張背景圖片 */
-.section2 {
-    width: 100%;
-    height: 100vh;
-    background-image: url('bottom-image.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;  /* 確保沒有額外的間距 */
-    padding: 0;
-}
-
-/* 📱 手機版 */
-@media screen and (max-width: 768px) {
-    .section1, .section2 {
-        background-size: contain;
-    }
-}
-
-/* 💻 電腦版 */
-@media screen and (min-width: 1200px) {
-    .section1, .section2 {
-        background-size: cover;
-    }
-}
-
-/* 內容區 */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* 文字輸入框 */
-.input-area {
-    margin-top: 100px; /* 正確的間距 */
-}
-
-/* 讓輸入框浮在 `section1` 上 */
-.input-area {
+/* 讓內容浮在背景圖片上 */
+.overlay-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* 讓內容真正置中 */
     z-index: 10;
-    background: rgba(255, 255, 255, 0.8); /* 增加可讀性 */
-    padding: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7); /* 增加可讀性，半透明白色背景 */
+    padding: 20px;
     border-radius: 10px;
 }
 
-input {
+/* 文字輸入框 */
+.input-area input {
     padding: 10px;
     font-size: 18px;
     border-radius: 20px;
-    border: 1px solid #fff;
+    border: 1px solid #ccc;
+    width: 300px; /* 控制輸入框寬度 */
+    text-align: center;
 }
 
-/* 預覽區 */
+/* 字型預覽區 */
 .preview-area {
     display: flex;
     justify-content: space-around;
-    gap: 5px;
-    margin-top: 100px;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .preview-box {
@@ -105,9 +48,55 @@ input {
     background: white;
     padding: 10px;
     border-radius: 20px;
-    border: none;
     display: flex;
     flex-direction: column-reverse;
     height: 150px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 字型名稱 */
+.font-title {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* 預覽文字 */
+.preview-text {
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 預設預覽文字 */
+.default-text {
+    font-size: 18px;
+    color: gray;
+    position: relative;
+    top: 0.5em;
+}
+
+/* 套用不同字型 */
+@font-face {
+    font-family: 'GirlFont';
+    src: url('./華康少女文字W5.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'ChildWindFont';
+    src: url('./兒風體W4.ttc') format('truetype');
+}
+@font-face {
+    font-family: 'InkFont';
+    src: url('./9.墨字體.ttf') format('truetype');
+}
+
+#previewGirl {
+    font-family: 'GirlFont';
+}
+#previewChild {
+    font-family: 'ChildWindFont';
+}
+#previewInk {
+    font-family: 'InkFont';
 }
