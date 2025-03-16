@@ -29,15 +29,16 @@ body {
 /* LOGO 與標題 */
 .header {
     display: flex;
-    align-items: center; /* 讓 Logo 和標題群組垂直對齊 */
-    justify-content: flex-start; /* 從左側開始對齊 */
+    align-items: center;
+    justify-content: flex-start;
     background: white;
     padding: 15px 20px;
-    border-radius: 10px;
-    max-width: 600px; /* 限制最大寬度，讓排版更整齊 */
-    margin: 0 auto; /* 讓整個區塊置中 */
-    position: relative; /* 為標語提供定位依據 */
-    min-height: 100px; /* 增加區塊高度，使文字有空間下移 */
+    border-radius: 20px; /* 增加導角，使框更圓潤 */
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 可選：增加陰影讓視覺更柔和 */
 }
 
 .logo {
