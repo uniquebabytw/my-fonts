@@ -23,18 +23,20 @@ body {
 
 /* 第一張背景圖片 */
 .section1 {
+    width: 100%;
     height: 100vh; /* 讓第一張圖片占滿一個螢幕 */
     background-image: url('top-image.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 /* 第二張背景圖片 */
 .section2 {
+    width: 100%;
     height: 100vh; /* 讓第二張圖片占滿一個螢幕 */
     background-image: url('bottom-image.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
