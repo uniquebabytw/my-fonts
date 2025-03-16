@@ -26,7 +26,7 @@ body {
     width: 100%;
     height: 100vh; /* 讓第一張圖片占滿一個螢幕 */
     background-image: url('top-image.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -36,24 +36,22 @@ body {
     width: 100%;
     height: 100vh; /* 讓第二張圖片占滿一個螢幕 */
     background-image: url('bottom-image.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* 📱 手機版（適合較窄的螢幕） */
+/* 手機版（適合較窄的螢幕） */
 @media screen and (max-width: 768px) {
-    body {
-        background-size: contain; /* 手機上顯示完整圖片，不會被裁切 */
-        background-position: center top;
+    .section1, .section2 {
+        background-size: contain; /* 讓手機完整顯示圖片 */
     }
 }
 
-/* 💻 電腦版（適合較寬的螢幕） */
+/* 電腦版（適合較寬的螢幕） */
 @media screen and (min-width: 1200px) {
-    body {
-        background-size: 100% auto; /* 讓圖片寬度100%，但高度自適應 */
-        background-position: center top;
+    .section1, .section2 {
+        background-size: cover; /* 讓圖片填滿寬螢幕 */
     }
 }
 
