@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>字型預覽</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- 引入 CSS 檔案 -->
 </head>
 <body>
-    <div class="section1"></div>
-    <div class="section2"></div>
-    
-    <div class="container">
-      
+
+    <!-- 這裡的內容會顯示在背景圖片上方 -->
+    <div class="overlay-content">
         <!-- 文字輸入框 -->
         <div class="input-area">
-            <input type="text" id="textInput" placeholder=" 請輸入寶貝名字">
+            <input type="text" id="textInput" placeholder="請輸入寶貝名字">
         </div>
 
         <!-- 字型預覽區 -->
         <div class="preview-area">
             <div class="preview-box">
                 <p class="font-title">少女體</p>
-               <div id="previewGirl" class="preview-text"><span class="default-text">預覽文字</span></div>            </div>
+                <div id="previewGirl" class="preview-text"><span class="default-text">預覽文字</span></div>
+            </div>
             <div class="preview-box">
                 <p class="font-title">兒風體</p>
                 <div id="previewChild" class="preview-text"><span class="default-text">預覽文字</span></div>
@@ -33,6 +32,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- 引入 JavaScript（如果有需要） -->
 </body>
 </html>
