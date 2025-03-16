@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('background.png'); /* 確保圖片路徑正確 */
+    background-image: url('background2.png'); /* 確保圖片路徑正確 */
     background-size: contain; /* 讓圖片完整顯示，比例不變 */
     background-position: center top; /* 讓圖片從上方開始顯示 */
     background-repeat: no-repeat;
