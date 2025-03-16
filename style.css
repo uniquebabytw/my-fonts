@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'GirlFont';
+    src: url('./華康少女文字W5.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'ChildWindFont';
+    src: url('./兒風體W4.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'InkFont';
+    src: url('./9.墨字體.ttf') format('truetype');
+}
+
 /* 📌 確保頁面不留白 */
 body {
     margin: 0;
@@ -17,7 +32,7 @@ body {
     position: absolute;
     top: 10%; /* 調整內容區塊位置 */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%, -10%);
     z-index: 10;
     text-align: center;
     background: rgba(255, 255, 255, 0.8); /* 半透明白色背景，提高可讀性 */
@@ -53,6 +68,8 @@ body {
 /* 預覽框 */
 .preview-box {
     flex-basis: calc(50% - 20px); /* 保持二欄佈局 */
+    width: 48%;
+    min-width: 150px;
     background: white;
     padding: 10px;
     border-radius: 20px;
