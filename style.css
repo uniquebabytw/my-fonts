@@ -73,6 +73,18 @@ body {
     margin-top: 100px; /* 正確的間距 */
 }
 
+/* 讓輸入框浮在 `section1` 上 */
+.input-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8); /* 增加可讀性 */
+    padding: 15px;
+    border-radius: 10px;
+}
+
 input {
     padding: 10px;
     font-size: 18px;
