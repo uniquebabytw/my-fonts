@@ -50,28 +50,32 @@ body {
     align-items: center;
     justify-content: center;
     position: relative; /* 讓內部標語定位 */
-    padding-bottom: 30px; /* 預留底部空間，避免文字擠壓 */
+    padding-bottom: 40px; /* 預留底部空間，避免標語與標題過近 */
 }
 
 .title h1 {
-    font-size: 24px;
-    margin-bottom: 0px;
-    line-height: 1.2;
+    font-size: 28px; /* 放大標題 */
+    font-weight: bold;
+    margin-bottom: 5px; /* 適當調整行距 */
+    line-height: 1.3; /* 增加可讀性 */
 }
 
 .title p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: normal;
     margin-top: 0px;
     line-height: 1.2;
+    color: #555; /* 字體稍微淡一點，減少干擾 */
 }
 
 .slogan {
-    font-size: 12px; /* 調整字體大小 */
+    font-size: 14px; /* 調整字體大小 */
     position: absolute; /* 讓標語能夠定位 */
-    bottom: 5px; /* 靠底部 */
-    right: 5px; /* 靠右邊 */
+    bottom: 10px; /* 靠底部 */
+    right: 10px; /* 靠右邊 */
     text-align: right;
-    color: #555; /* 可選：讓字稍微淡一些 */
+    color: #777; /* 讓標語顏色更淡一點，區分主標題 */
+    line-height: 1.3; /* 保持可讀性 */
 }
 
 /* 文字輸入框 */
