@@ -46,7 +46,7 @@ body {
 /* 文字輸入框 */
 .input-area {
     margin: 150px 0;
-    margin-top: 800px; /* 往下移 1 個框的距離 */
+    margin-top: 1600px; /* 往下移 1 個框的距離 */
 }
 
 input {
