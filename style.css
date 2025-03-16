@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('background2.png'); /* 替換為你的背景圖片 */
-    background-size: 100% 100%; /* 讓圖片填滿整個畫面 */
+    background-size: cover 10%; /* 讓圖片填滿整個畫面 */
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh; /* 讓背景高度固定為視窗大小 */
