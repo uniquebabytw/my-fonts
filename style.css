@@ -29,17 +29,19 @@ body {
 /* LOGO 與標題 */
 .header {
     display: flex;
-    align-items: center; /* 讓 Logo 和標題垂直置中對齊 */
+    align-items: center; /* 讓 Logo 和標題垂直對齊 */
     justify-content: flex-start; /* 從左側開始對齊 */
     background: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     max-width: 600px; /* 限制最大寬度，讓排版更整齊 */
-    margin: 0 auto; /* 置中對齊 */
+    margin: 0 auto; /* 讓整個區塊置中 */
+    position: relative; /* 為標語提供定位依據 */
+    min-height: 100px; /* 增加區塊高度，使文字有空間下移 */
 }
 
 .logo {
-    width: 80px; /* 保持 Logo 大小 */
+    width: 65px; /* 縮小 Logo */
     height: auto;
     margin-right: 15px; /* 與標題區塊保持適當間距 */
 }
@@ -50,27 +52,30 @@ body {
     align-items: flex-start; /* 讓標題與左側對齊 */
     justify-content: center; /* 讓內容垂直居中 */
     flex-grow: 1; /* 讓標題區佔據剩餘空間 */
+    padding-top: 10px; /* 讓標題稍微往下移 */
 }
 
 .title h1 {
     font-size: 24px;
     font-weight: bold;
-    margin: 0;
+    margin: 5px 0 0 0; /* 增加 margin-top，讓字往下移 */
     line-height: 1.2;
 }
 
 .title p {
     font-size: 16px;
-    margin: 2px 0;
+    margin: 2px 0 0 0;
     color: #555;
 }
 
 .slogan {
-    font-size: 14px;
+    font-size: 12px; /* 縮小標語 */
     text-align: right;
     color: #777;
-    align-self: flex-end; /* 讓標語靠右 */
-    margin-top: 5px; /* 與標題保持間距 */
+    position: absolute; /* 讓標語固定在右下角 */
+    bottom: 5px; /* 調整標語位置，使其不影響標題 */
+    right: 10px;
+    line-height: 1.2;
 }
 
 /* 文字輸入框 */
