@@ -15,11 +15,10 @@
 
 /* 基本樣式 */
 body {
-    background-image: url('background1.png');
-    background-size: cover; /* 讓背景圖片填滿整個畫面 */
-    background-position: center top; /* 圖片置中，從頂部開始 */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* 背景固定，不隨滾動變化 */
+    background-image: url('top-image.png'), url('bottom-image.png');
+    background-position: center top, center bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, cover; 
 }
 
 /* 📱 手機版（適合較窄的螢幕） */
