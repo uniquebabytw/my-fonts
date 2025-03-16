@@ -43,7 +43,7 @@ body {
 .overlay-content {
     position: absolute;
     top: 10%; /* 調整內容區塊位置 */
-    inset: 0; margin: auto;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     text-align: center;
@@ -73,6 +73,7 @@ body {
     gap: 10px;
     margin-top: 20px;
     flex-wrap: wrap;
+    width: 100%; /* 確保佔滿可用寬度 */
 }
 
 /* 預覽框 */
