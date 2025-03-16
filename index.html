@@ -1,103 +1,37 @@
-/* 確保頁面無額外空白 */
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('background2.png'); /* 替換為你的背景圖片 */
-    background-size: cover; /* 讓圖片填滿整個畫面 */
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* 讓背景高度固定為視窗大小 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字型預覽</title>
+    <link rel="stylesheet" href="style.css"> <!-- 引入 CSS 檔案 -->
+</head>
+<body>
 
-/* 讓內容浮在背景圖片上 */
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 讓內容真正置中 */
-    z-index: 10;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.7); /* 增加可讀性，半透明白色背景 */
-    padding: 20px;
-    border-radius: 10px;
-}
+    <!-- 這裡的內容會顯示在背景圖片上方 -->
+    <div class="overlay-content">
+        <!-- 文字輸入框 -->
+        <div class="input-area">
+            <input type="text" id="textInput" placeholder="請輸入寶貝名字">
+        </div>
 
-/* 文字輸入框 */
-.input-area input {
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    width: 300px; /* 控制輸入框寬度 */
-    text-align: center;
-}
+        <!-- 字型預覽區 -->
+        <div class="preview-area">
+            <div class="preview-box">
+                <p class="font-title">少女體</p>
+                <div id="previewGirl" class="preview-text"><span class="default-text">預覽文字</span></div>
+            </div>
+            <div class="preview-box">
+                <p class="font-title">兒風體</p>
+                <div id="previewChild" class="preview-text"><span class="default-text">預覽文字</span></div>
+            </div>
+            <div class="preview-box">
+                <p class="font-title">墨體字</p>
+                <div id="previewInk" class="preview-text"><span class="default-text">預覽文字</span></div>
+            </div>
+        </div>
+    </div>
 
-/* 字型預覽區 */
-.preview-area {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.preview-box {
-    width: 30%;
-    background: white;
-    padding: 10px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column-reverse;
-    height: 150px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 字型名稱 */
-.font-title {
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-}
-
-/* 預覽文字 */
-.preview-text {
-    font-size: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 預設預覽文字 */
-.default-text {
-    font-size: 18px;
-    color: gray;
-    position: relative;
-    top: 0.5em;
-}
-
-/* 套用不同字型 */
-@font-face {
-    font-family: 'GirlFont';
-    src: url('./華康少女文字W5.TTF') format('truetype');
-}
-@font-face {
-    font-family: 'ChildWindFont';
-    src: url('./兒風體W4.ttc') format('truetype');
-}
-@font-face {
-    font-family: 'InkFont';
-    src: url('./9.墨字體.ttf') format('truetype');
-}
-
-#previewGirl {
-    font-family: 'GirlFont';
-}
-#previewChild {
-    font-family: 'ChildWindFont';
-}
-#previewInk {
-    font-family: 'InkFont';
-}
-
+    <script src="script.js"></script> <!-- 引入 JavaScript（如果有需要） -->
+</body>
+</html>
