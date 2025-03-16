@@ -15,7 +15,11 @@
 
 /* 基本樣式 */
 body {
-    background-image: red; /* 更換成你的圖片網址 */
+    background-image: url('background.png'); /* 使用相對路徑 */
+    background-size: cover; /* 讓背景圖片填滿畫面 */
+    background-position: center top; /* 置中，從頂部開始 */
+    background-repeat: no-repeat; /* 不重複 */
+    background-attachment: fixed; /* 背景固定，不隨滾動變化 */
 }
 
 .container {
