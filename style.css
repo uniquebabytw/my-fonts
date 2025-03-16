@@ -16,11 +16,26 @@
 /* 基本樣式 */
 body {
     background-image: url('background1.png');
-    background-size: contain; /* 讓圖片填滿視窗 */
-    background-position: center top; /* 讓圖片從頂部開始 */
+    background-size: cover; /* 讓背景圖片填滿整個畫面 */
+    background-position: center top; /* 圖片置中，從頂部開始 */
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 150vh; /* 強制增加畫面高度，讓視窗可以往下移 */
+    background-attachment: fixed; /* 背景固定，不隨滾動變化 */
+}
+
+/* 📱 手機版（適合較窄的螢幕） */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* 手機上顯示完整圖片，不會被裁切 */
+        background-position: center top;
+    }
+}
+
+/* 💻 電腦版（適合較寬的螢幕） */
+@media screen and (min-width: 1200px) {
+    body {
+        background-size: 100% auto; /* 讓圖片寬度100%，但高度自適應 */
+        background-position: center top;
+    }
 }
 
 .container {
