@@ -106,7 +106,7 @@ input {
 }
 
 .preview-text {
-    font-size: 24px;
+    font-size: 32px;
     flex-grow: 4; /* 佔 4/5 高度 */
     display: flex;
     align-items: center;
@@ -118,6 +118,8 @@ input {
 .default-text {
     font-size: 18px; /* 調整「預覽文字」的大小 */
     color: gray; /* 讓顏色淡一點（可選） */
+    position: relative;
+    top: 0.5em; /* 向下移半行 */
 }
 
 /* 套用不同字型 */
