@@ -29,7 +29,7 @@ body {
 /* LOGO 與標題 */
 .header {
     display: flex;
-    align-items: center; /* 讓 Logo 和標題垂直對齊 */
+    align-items: center; /* 讓 Logo 和標題群組垂直對齊 */
     justify-content: flex-start; /* 從左側開始對齊 */
     background: white;
     padding: 15px 20px;
@@ -43,26 +43,23 @@ body {
 .logo {
     width: 65px; /* 縮小 Logo */
     height: auto;
-    margin-right: 15px; /* 與標題區塊保持適當間距 */
+    margin-right: 15px; /* 與標題群組保持適當間距 */
 }
 
-.title {
+.title-group {
     display: flex;
     flex-direction: column; /* 讓標題區的文字垂直排列 */
-    align-items: flex-start; /* 讓標題與左側對齊 */
-    justify-content: center; /* 讓內容垂直居中 */
-    flex-grow: 1; /* 讓標題區佔據剩餘空間 */
-    padding-top: 10px; /* 讓標題稍微往下移 */
+    justify-content: center; /* 讓內容與 Logo 垂直對齊 */
 }
 
-.title h1 {
+.title-group h1 {
     font-size: 24px;
     font-weight: bold;
-    margin: 5px 0 0 0; /* 增加 margin-top，讓字往下移 */
+    margin: 0;
     line-height: 1.2;
 }
 
-.title p {
+.title-group p {
     font-size: 16px;
     margin: 2px 0 0 0;
     color: #555;
