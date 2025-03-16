@@ -1,12 +1,12 @@
-/* 確保頁面無額外空白 */
+/* 確保頁面沒有額外間距 */
 body {
     margin: 0;
     padding: 0;
-    background-image: url('background2.png'); /* 替換為你的背景圖片 */
-    background-size: cover 10%; /* 讓圖片填滿整個畫面 */
-    background-position: center;
+    background-image: url('background.png'); /* 請確保圖片路徑正確 */
+    background-size: cover; /* 讓圖片填滿整個畫面 */
+    background-position: center top; /* 讓圖片從頂部開始顯示 */
     background-repeat: no-repeat;
-    height: 100vh; /* 讓背景高度固定為視窗大小 */
+    height: 100vh; /* 讓背景填滿視窗 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,9 +20,11 @@ body {
     transform: translate(-50%, -50%); /* 讓內容真正置中 */
     z-index: 10;
     text-align: center;
-    background: rgba(255, 255, 255, 0.7); /* 增加可讀性，半透明白色背景 */
+    background: rgba(255, 255, 255, 0.8); /* 增加可讀性，半透明白色背景 */
     padding: 20px;
     border-radius: 10px;
+    width: 80%; /* 適應不同裝置 */
+    max-width: 500px; /* 限制最大寬度 */
 }
 
 /* 文字輸入框 */
@@ -31,7 +33,7 @@ body {
     font-size: 18px;
     border-radius: 20px;
     border: 1px solid #ccc;
-    width: 300px; /* 控制輸入框寬度 */
+    width: 100%; /* 讓輸入框適應容器 */
     text-align: center;
 }
 
@@ -41,8 +43,10 @@ body {
     justify-content: space-around;
     gap: 10px;
     margin-top: 20px;
+    flex-wrap: wrap; /* 手機上換行 */
 }
 
+/* 預覽框 */
 .preview-box {
     width: 30%;
     background: white;
@@ -63,7 +67,7 @@ body {
 
 /* 預覽文字 */
 .preview-text {
-    font-size: 28px;
+    font-size: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,3 +104,37 @@ body {
 #previewInk {
     font-family: 'InkFont';
 }
+
+/* 📱 手機版調整 */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* 手機上完整顯示圖片 */
+        background-position: center top;
+    }
+    
+    .overlay-content {
+        width: 90%; /* 手機版內容區稍微縮小 */
+    }
+
+    .preview-box {
+        width: 45%; /* 讓手機版的框比較大 */
+        height: 120px;
+    }
+
+    .preview-text {
+        font-size: 28px; /* 手機版的預覽文字小一點 */
+    }
+}
+
+/* 💻 電腦版調整 */
+@media screen and (min-width: 1200px) {
+    body {
+        background-size: cover; /* 電腦版填滿畫面 */
+        background-position: center;
+    }
+
+    .preview-box {
+        width: 30%; /* 保持適當大小 */
+    }
+}
+
