@@ -121,7 +121,7 @@ input {
 }
 
 .preview-text {
-    font-size: 38px;
+    font-size: 34px;
     flex-grow: 4; /* 佔 4/5 高度 */
     display: flex;
     align-items: center;
