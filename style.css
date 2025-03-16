@@ -43,26 +43,35 @@ body {
 }
 
 .title {
-   text-align: center; /* 讓文字水平置中 */
-    flex-grow: 1; /* 讓標題區可以保持居中 */
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* 讓內部標語定位 */
+    padding-bottom: 30px; /* 預留底部空間，避免文字擠壓 */
 }
 
 .title h1 {
     font-size: 24px;
-     margin-bottom: 2px; /* 縮小與 "Unique Baby" 的距離 */
+    margin-bottom: 0px;
+    line-height: 1.2;
 }
 
 .title p {
     font-size: 16px;
-    margin-top: 2px; /* 縮小與 "優可寶貝" 的距離 */
+    margin-top: 0px;
+    line-height: 1.2;
 }
 
 .slogan {
-    font-size: 12px; /* 縮小標語字體 */
+    font-size: 12px; /* 調整字體大小 */
     position: absolute; /* 讓標語能夠定位 */
-    bottom: 10px; /* 距離底部 10px */
-    right: 10px; /* 距離右側 10px */
-    text-align: right; /* 讓文字靠右對齊 */
+    bottom: 5px; /* 靠底部 */
+    right: 5px; /* 靠右邊 */
+    text-align: right;
+    color: #555; /* 可選：讓字稍微淡一些 */
 }
 
 /* 文字輸入框 */
