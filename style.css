@@ -42,7 +42,7 @@ body {
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
     position: absolute;
-    top: 10%; /* 調整內容區塊位置 */
+    top: 90%; /* 調整內容區塊位置 */
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -57,7 +57,7 @@ body {
 .input-wrapper {
     padding: 10px; /* 保留內距，讓輸入框不會緊貼邊緣 */
     position: absolute;
-    top: 5%; /* 放在最上方 */
+    top: 30%; /* 放在最上方 */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
