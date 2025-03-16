@@ -15,7 +15,7 @@
 
 /* 基本樣式 */
 body {
-    height: 200vh; /* 讓頁面高度變成 2 倍螢幕，確保可以滾動 */
+    height: auto; /* 讓 .section1 & .section2 控制高度 */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -24,8 +24,8 @@ body {
 /* 第一張背景圖片 */
 .section1 {
     width: 100%;
-    height: 100vh; /* 讓第一張圖片占滿一個螢幕 */
-    background-image: url('top-image.png');
+    height: 100vh;
+    background-image: url('top-image.png'); /* 確保圖片路徑正確 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,27 +34,28 @@ body {
 /* 第二張背景圖片 */
 .section2 {
     width: 100%;
-    height: 100vh; /* 讓第二張圖片占滿一個螢幕 */
-    background-image: url('bottom-image.png');
+    height: 100vh;
+    background-image: url('bottom-image.png'); /* 確保圖片路徑正確 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* 手機版（適合較窄的螢幕） */
+/* 📱 手機版 */
 @media screen and (max-width: 768px) {
     .section1, .section2 {
-        background-size: contain; /* 讓手機完整顯示圖片 */
+        background-size: contain;
     }
 }
 
-/* 電腦版（適合較寬的螢幕） */
+/* 💻 電腦版 */
 @media screen and (min-width: 1200px) {
     .section1, .section2 {
-        background-size: cover; /* 讓圖片填滿寬螢幕 */
+        background-size: cover;
     }
 }
 
+/* 內容區 */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -63,8 +64,7 @@ body {
 
 /* 文字輸入框 */
 .input-area {
-    margin: 150px 0;
-    margin-top: 600px; /* 往下移 1 個框的距離 */
+    margin-top: 100px; /* 正確的間距 */
 }
 
 input {
@@ -79,58 +79,17 @@ input {
     display: flex;
     justify-content: space-around;
     gap: 5px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .preview-box {
     width: 30%;
     background: white;
     padding: 10px;
-    border-radius: 20px; /* 增加導角 */
+    border-radius: 20px;
     border: none;
     display: flex;
     flex-direction: column-reverse;
     height: 150px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 可選：增加陰影 */
-}
-
-.font-title {
-    font-weight: bold;
-    font-size: 16px;
-    flex-grow: 1; /* 佔 1/5 高度 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1; /* 行距縮小 */
-    padding-bottom: 2px; /* 控制與預覽文字的距離 */
-}
-
-.preview-text {
-    font-size: 34px;
-    flex-grow: 4; /* 佔 4/5 高度 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1; /* 行距縮小 */
-    padding-top: 2px; /* 控制與字型名稱的距離 */
-}
-
-.default-text {
-    font-size: 18px; /* 調整「預覽文字」的大小 */
-    color: gray; /* 讓顏色淡一點（可選） */
-    position: relative;
-    top: 0.5em; /* 向下移半行 */
-}
-
-/* 套用不同字型 */
-#previewGirl {
-    font-family: 'GirlFont';
-}
-
-#previewChild {
-    font-family: 'ChildWindFont';
-}
-
-#previewInk {
-    font-family: 'InkFont';
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
