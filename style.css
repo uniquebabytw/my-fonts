@@ -52,7 +52,7 @@ body {
 
 /* 預覽框 */
 .preview-box {
-    width: 30%;
+    flex-basis: calc(50% - 20px); /* 保持二欄佈局 */
     background: white;
     padding: 10px;
     border-radius: 20px;
