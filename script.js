@@ -15,12 +15,19 @@ window.onload = function () {
 // 當視窗大小改變時，重新計算高度
 window.onresize = adjustHeight;
 
-// 🔹 監聽輸入框變化，更新預覽文字
 function updatePreviewText() {
     const inputField = document.getElementById("textInput");
-    const previewBoxes = document.querySelectorAll(".preview-text");
 
     if (!inputField) return; // 確保輸入框存在
+
+    inputField.addEventListener("input", function () {
+        const text = inputField.value.trim() || "預覽"; // 預設顯示 "預覽"
+
+        document.getElementById("previewGirl").textContent = text;
+        document.getElementById("previewChild").textContent = text;
+        document.getElementById("previewInk").textContent = text;
+    });
+}
 
     inputField.addEventListener("input", function () {
         const text = inputField.value.trim() || "預覽"; // 預設顯示 "預覽"
