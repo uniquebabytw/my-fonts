@@ -64,6 +64,7 @@ body {
     max-width: 400px;
     display: block;
     margin: 0 auto; /* 確保輸入框置中 */
+    text-align: center;
 }
 
 /* 預覽區 */
