@@ -1,38 +1,107 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>字型預覽</title>
-    <link rel="stylesheet" href="style.css"> <!-- 連結 CSS -->
-</head>
-<body>
+/* 確保頁面沒有額外空白 */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.png'); /* 確保圖片路徑正確 */
+    background-size: contain; /* 確保圖片完整顯示，且比例不變 */
+    background-position: top center; /* 讓圖片從頂部開始顯示 */
+    background-repeat: no-repeat; /* 不重複顯示 */
+    height: 200vh; /* 讓使用者滾動時剛好到圖片底部 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    <!-- 讓輸入框和預覽區浮在背景圖片上 -->
-    <div class="overlay-content">
-        <!-- 文字輸入框 -->
-        <div class="input-area">
-            <input type="text" id="textInput" placeholder="請輸入寶貝名字">
-        </div>
+/* 讓內容浮在背景圖片上，不會跑到下面 */
+.overlay-content {
+    position: absolute;
+    top: 10%; /* 調整位置，確保輸入框位於圖片可視範圍內 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* 半透明白色背景，提高可讀性 */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* 適應不同裝置 */
+    max-width: 500px; /* 限制最大寬度 */
+}
 
-        <!-- 字型預覽區 -->
-        <div class="preview-area">
-            <div class="preview-box">
-                <p class="font-title">少女體</p>
-                <div id="previewGirl" class="preview-text"><span class="default-text">預覽文字</span></div>
-            </div>
-            <div class="preview-box">
-                <p class="font-title">兒風體</p>
-                <div id="previewChild" class="preview-text"><span class="default-text">預覽文字</span></div>
-            </div>
-            <div class="preview-box">
-                <p class="font-title">墨體字</p>
-                <div id="previewInk" class="preview-text"><span class="default-text">預覽文字</span></div>
-            </div>
-        </div>
-    </div>
+/* 讓輸入框靠近上方 */
+.input-area {
+    margin-top: 20px;
+}
 
-    <script src="script.js"></script> <!-- 連結 JavaScript（如有需要） -->
-</body>
-</html>
+.input-area input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+}
 
+/* 預覽區 */
+.preview-area {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* 預覽框 */
+.preview-box {
+    width: 30%;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 150px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 預覽文字 */
+.preview-text {
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 📱 手機版調整 */
+@media screen and (max-width: 768px) {
+    body {
+        height: 200vh; /* 確保手機版滾到底時，剛好是圖片底部 */
+    }
+
+    .overlay-content {
+        width: 90%;
+        top: 15%; /* 手機版調整內容區塊位置 */
+    }
+
+    .preview-box {
+        width: 45%;
+        height: 120px;
+    }
+
+    .preview-text {
+        font-size: 28px;
+    }
+}
+
+/* 💻 電腦版調整 */
+@media screen and (min-width: 1200px) {
+    body {
+        height: 200vh; /* 確保電腦版滾到底時，剛好是圖片底部 */
+    }
+
+    .overlay-content {
+        top: 20%; /* 調整內容位置，確保不被擠到 */
+    }
+
+    .preview-box {
+        width: 30%;
+    }
+}
