@@ -1,49 +1,53 @@
-/* 確保頁面沒有額外空白 */
+/* 確保整個頁面沒有額外空白 */
 body {
     margin: 0;
     padding: 0;
-    background-image: url('background2.png'); /* 確保圖片路徑正確 */
-    background-size: contain; /* 讓圖片完整顯示，比例不變 */
-    background-position: center top; /* 讓圖片從上方開始顯示 */
-    background-repeat: no-repeat;
-    min-height: 100vh; /* 讓背景填滿至少一個視窗 */
+    background-image: url('background.png'); /* 請確保圖片路徑正確 */
+    background-size: contain; /* 確保圖片完整顯示，且比例不變 */
+    background-position: top center; /* 讓圖片從頂部對齊 */
+    background-repeat: no-repeat; /* 不重複顯示 */
+    height: 200vh; /* 讓使用者可以滾動，顯示完整 2 頁長的圖片 */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-/* 讓內容浮在背景圖片上 */
+/* 讓內容浮在背景圖片上，不會跑到下面 */
 .overlay-content {
     position: absolute;
-    top: 50%;
+    top: 10%; /* 設定初始位置 */
     left: 50%;
-    transform: translate(-50%, -50%); /* 讓內容真正置中 */
+    transform: translateX(-50%);
     z-index: 10;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* 增加可讀性，半透明白色背景 */
+    background: rgba(255, 255, 255, 0.8); /* 半透明白色背景，提高可讀性 */
     padding: 20px;
     border-radius: 10px;
     width: 80%; /* 適應不同裝置 */
     max-width: 500px; /* 限制最大寬度 */
 }
 
-/* 文字輸入框 */
+/* 讓輸入框靠近上方 */
+.input-area {
+    margin-top: 20px;
+}
+
 .input-area input {
     padding: 10px;
     font-size: 18px;
     border-radius: 20px;
     border: 1px solid #ccc;
-    width: 100%; /* 讓輸入框適應容器 */
+    width: 100%;
     text-align: center;
 }
 
-/* 字型預覽區 */
+/* 預覽區 */
 .preview-area {
     display: flex;
     justify-content: space-around;
     gap: 10px;
     margin-top: 20px;
-    flex-wrap: wrap; /* 手機上換行 */
+    flex-wrap: wrap;
 }
 
 /* 預覽框 */
@@ -58,13 +62,6 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 字型名稱 */
-.font-title {
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-}
-
 /* 預覽文字 */
 .preview-text {
     font-size: 34px;
@@ -73,68 +70,39 @@ body {
     justify-content: center;
 }
 
-/* 預設預覽文字 */
-.default-text {
-    font-size: 18px;
-    color: gray;
-    position: relative;
-    top: 0.5em;
-}
-
-/* 套用不同字型 */
-@font-face {
-    font-family: 'GirlFont';
-    src: url('./華康少女文字W5.TTF') format('truetype');
-}
-@font-face {
-    font-family: 'ChildWindFont';
-    src: url('./兒風體W4.ttc') format('truetype');
-}
-@font-face {
-    font-family: 'InkFont';
-    src: url('./9.墨字體.ttf') format('truetype');
-}
-
-#previewGirl {
-    font-family: 'GirlFont';
-}
-#previewChild {
-    font-family: 'ChildWindFont';
-}
-#previewInk {
-    font-family: 'InkFont';
-}
-
 /* 📱 手機版調整 */
 @media screen and (max-width: 768px) {
     body {
-        background-size: contain; /* 手機上完整顯示圖片，保持比例 */
-        background-position: center top;
+        height: 200vh; /* 手機上仍顯示完整的 2 頁長圖片 */
     }
-    
+
     .overlay-content {
-        width: 90%; /* 手機版內容區稍微縮小 */
+        width: 90%;
+        top: 15%; /* 手機版調整內容區塊位置 */
     }
 
     .preview-box {
-        width: 45%; /* 讓手機版的框比較大 */
+        width: 45%;
         height: 120px;
     }
 
     .preview-text {
-        font-size: 28px; /* 手機版的預覽文字小一點 */
+        font-size: 28px;
     }
 }
 
 /* 💻 電腦版調整 */
 @media screen and (min-width: 1200px) {
     body {
-        background-size: contain; /* 電腦版也完整顯示圖片 */
-        background-position: center top;
+        height: 200vh; /* 電腦版也能完整顯示圖片 */
+    }
+
+    .overlay-content {
+        top: 20%; /* 調整內容位置，確保不被擠到 */
     }
 
     .preview-box {
-        width: 30%; /* 保持適當大小 */
+        width: 30%;
     }
 }
 
