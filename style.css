@@ -5,12 +5,24 @@
 
 @font-face {
     font-family: 'ChildWindFont';
-    src: url('./兒風體W4.ttc') format('truetype');
+    src: url('./兒風體W4.ttf') format('truetype'); /* 可能需轉換 */
 }
 
 @font-face {
     font-family: 'InkFont';
     src: url('./9.墨字體.ttf') format('truetype');
+}
+
+#previewGirl {
+    font-family: 'GirlFont', sans-serif;
+}
+
+#previewChild {
+    font-family: 'ChildWindFont', sans-serif;
+}
+
+#previewInk {
+    font-family: 'InkFont', sans-serif;
 }
 
 /* 📌 確保頁面不留白 */
