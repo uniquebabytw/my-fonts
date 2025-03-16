@@ -43,8 +43,8 @@ body {
 .overlay-content {
     position: absolute;
     top: 10%; /* 調整內容區塊位置 */
-    left: 50%;
-    transform: translateX(-50%, -10%);
+    inset: 0; margin: auto;
+    transform: translateX(-50%);
     z-index: 10;
     text-align: center;
     background: rgba(255, 255, 255, 0.8); /* 半透明白色背景，提高可讀性 */
@@ -60,18 +60,16 @@ body {
 }
 
 .input-area input {
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
     width: 100%;
-    text-align: center;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto; /* 確保輸入框置中 */
 }
 
 /* 預覽區 */
 .preview-area {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* 讓所有預覽框都置中 */
     gap: 10px;
     margin-top: 20px;
     flex-wrap: wrap;
@@ -79,8 +77,8 @@ body {
 
 /* 預覽框 */
 .preview-box {
-    flex-basis: calc(50% - 20px); /* 保持二欄佈局 */
-    width: 48%;
+   width: 45%;
+    max-width: 200px; /* 限制最大寬度 */
     min-width: 150px;
     background: white;
     padding: 10px;
