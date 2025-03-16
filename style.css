@@ -1,21 +1,21 @@
-/* 確保整個頁面沒有額外空白 */
+/* 📌 確保頁面不留白 */
 body {
     margin: 0;
     padding: 0;
-    background-image: url('background2.png'); /* 請確保圖片路徑正確 */
-    background-size: contain; /* 確保圖片完整顯示，且比例不變 */
-    background-position: top center; /* 讓圖片從頂部對齊 */
+    background-image: url('background.png'); /* 確保圖片路徑正確 */
+    background-size: 100% auto; /* 確保圖片寬度填滿，保持比例 */
+    background-position: top center; /* 讓圖片從頂部開始顯示 */
     background-repeat: no-repeat; /* 不重複顯示 */
-    height: 200vh; /* 讓使用者可以滾動，顯示完整 2 頁長的圖片 */
+    height: 200vh; /* 電腦版剛好顯示完整圖片 */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* 讓內容浮在背景圖片上，不會跑到下面 */
+/* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
     position: absolute;
-    top: 10%; /* 設定初始位置 */
+    top: 10%; /* 調整內容區塊位置 */
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -23,8 +23,8 @@ body {
     background: rgba(255, 255, 255, 0.8); /* 半透明白色背景，提高可讀性 */
     padding: 20px;
     border-radius: 10px;
-    width: 80%; /* 適應不同裝置 */
-    max-width: 500px; /* 限制最大寬度 */
+    width: 80%;
+    max-width: 500px;
 }
 
 /* 讓輸入框靠近上方 */
@@ -73,7 +73,8 @@ body {
 /* 📱 手機版調整 */
 @media screen and (max-width: 768px) {
     body {
-        height: 200vh; /* 手機上仍顯示完整的 2 頁長圖片 */
+        height: auto; /* 讓 JS 設定高度 */
+        min-height: calc(200vw * 2); /* 讓手機高度符合圖片長度 */
     }
 
     .overlay-content {
@@ -94,21 +95,15 @@ body {
 /* 💻 電腦版調整 */
 @media screen and (min-width: 1200px) {
     body {
-        height: 200vh; /* 電腦版也能完整顯示圖片 */
+        height: 200vh; /* 確保電腦版滾到底時，剛好是圖片底部 */
     }
 
     .overlay-content {
-        top: 20%; /* 調整內容位置，確保不被擠到 */
+        top: 20%;
     }
 
     .preview-box {
         width: 30%;
-    }
-}
-
-
-    .preview-box {
-        width: 30%; /* 保持適當大小 */
     }
 }
 
