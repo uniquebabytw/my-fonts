@@ -55,15 +55,16 @@ body {
 }
 
 .input-wrapper {
-    padding: 20px; /* 增加內距，讓白框更明顯 */
-    border-radius: 15px; /* 圓角美化 */
-    margin-bottom: 30px; /* 增加輸入框與預覽區的間距 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    max-width: 450px; /* 限制最大寬度 */
+    padding: 10px; /* 保留內距，讓輸入框不會緊貼邊緣 */
+    position: absolute;
+    top: 5%; /* 放在最上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
 }
+
 /* 讓輸入框靠近上方 */
 .input-area {
     margin-top: 20px;
