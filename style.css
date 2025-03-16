@@ -57,7 +57,7 @@ body {
 .input-wrapper {
     padding: 10px; /* 保留內距，讓輸入框不會緊貼邊緣 */
     position: absolute;
-    top: 30%; /* 放在最上方 */
+    top: 20%; /* 放在最上方 */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
