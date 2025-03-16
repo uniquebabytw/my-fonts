@@ -69,19 +69,17 @@ body {
 
 /* 預覽區 */
 .preview-area {
-    display: flex;
-    justify-content: center; /* 讓所有預覽框都置中 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 始終維持 2 欄 */
     gap: 10px;
     margin-top: 20px;
-    flex-wrap: wrap;
-    width: 100%; /* 確保佔滿可用寬度 */
+    width: 100%;
+    max-width: 500px; /* 限制最大寬度，避免太寬 */
+    justify-content: center;
 }
 
 /* 預覽框 */
 .preview-box {
-   width: 45%;
-    max-width: 200px; /* 限制最大寬度 */
-    min-width: 150px;
     background: white;
     padding: 10px;
     border-radius: 20px;
@@ -89,6 +87,7 @@ body {
     flex-direction: column-reverse;
     height: 150px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* 預覽文字 */
