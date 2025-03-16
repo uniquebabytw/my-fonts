@@ -15,7 +15,7 @@
 
 /* 基本樣式 */
 body {
-    background-image: url('background.png');
+    background-image: url('background1.png');
     background-size: cover; /* 讓圖片填滿視窗 */
     background-position: center top; /* 讓圖片從頂部開始 */
     background-repeat: no-repeat;
