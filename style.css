@@ -55,10 +55,8 @@ body {
 }
 
 .input-wrapper {
-    background: white; /* 獨立白色框 */
     padding: 20px; /* 增加內距，讓白框更明顯 */
     border-radius: 15px; /* 圓角美化 */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 添加陰影 */
     margin-bottom: 30px; /* 增加輸入框與預覽區的間距 */
     display: flex;
     justify-content: center;
