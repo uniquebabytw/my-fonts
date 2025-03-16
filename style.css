@@ -25,56 +25,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-}
-
-/* LOGO 與標題 */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: white;
-    padding: 15px 20px;
-    border-radius: 20px; /* 增加導角，使框更圓潤 */
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-    min-height: 100px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 可選：增加陰影讓視覺更柔和 */
-}
-
-.logo {
-    width: 65px; /* 縮小 Logo */
-    height: auto;
-    margin-right: 15px; /* 與標題群組保持適當間距 */
-}
-
-.title-group {
-    display: flex;
-    flex-direction: column; /* 讓標題區的文字垂直排列 */
-    justify-content: center; /* 讓內容與 Logo 垂直對齊 */
-}
-
-.title-group h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.title-group p {
-    font-size: 16px;
-    margin: 2px 0 0 0;
-    color: #555;
-}
-
-.slogan {
-    font-size: 12px; /* 縮小標語 */
-    text-align: right;
-    color: #777;
-    position: absolute; /* 讓標語固定在右下角 */
-    bottom: 5px; /* 調整標語位置，使其不影響標題 */
-    right: 10px;
-    line-height: 1.2;
+    text-align: center;
 }
 
 /* 文字輸入框 */
