@@ -81,7 +81,7 @@ body {
 /* 預覽區 */
 .preview-area {
     display: grid;
-    grid-template-columns: repeat(2, 660px); /* 讓預覽框維持 2 欄 */
+    grid-template-columns: repeat(2, 500px); /* 讓預覽框維持 2 欄 */
     gap: 10px;
     margin-top: 40px; /* 讓內容有間距 */
     width: 100%;
@@ -110,21 +110,6 @@ body {
     justify-content: center;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between; /* 讓欄位平均分布 */
-    align-items: center;
-    width: 100%;
-}
-
-.column {
-    flex: 1; /* 讓兩個欄位平均分配空間 */
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
 /* 📱 手機版調整 */
 @media screen and (max-width: 768px) {
     body {
@@ -139,7 +124,7 @@ body {
 }
 
    .preview-area {
-        grid-template-columns: repeat(2, 660px); /* 即使是手機版也保持 2 欄 */
+        grid-template-columns: repeat(2, 500px); /* 即使是手機版也保持 2 欄 */
     }
 
     .preview-box {
@@ -148,9 +133,6 @@ body {
 
     .preview-text {
         font-size: 28px; /* 讓手機版的預覽文字稍微縮小 */
-    }
-    .column {
-        flex-basis: 50%; /* 每個欄位佔 50% */
     }
 }
     
