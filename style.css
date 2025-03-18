@@ -100,7 +100,8 @@ body {
     height: 150px;
     text-align: center;
     position: relative;
-    top: -10px; /* 負值讓它往上移 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    top: -30px; /* 負值讓它往上移 */
 }
 
 /* 預覽文字 */
