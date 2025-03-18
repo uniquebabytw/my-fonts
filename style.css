@@ -55,7 +55,7 @@ body {
 
 .input-wrapper {
     position: absolute;
-    top: 20%; /* 讓輸入框始終靠近畫面上方 */
+    top: 35%; /* 讓輸入框始終靠近畫面上方 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -69,12 +69,12 @@ body {
 }
 
 .input-area input {
-    padding: 8px; /* 調高輸入框的高度 */
+    padding: 15px; /* 調高輸入框的高度 */
     font-size: 18px;
     border-radius: 10px;
     border: 1px solid #ccc;
     width: 80%; /* 讓輸入框變短 */
-    max-width: 280px; /* 限制最大寬度 */
+    max-width: 300px; /* 限制最大寬度 */
     text-align: center;
 }
 
