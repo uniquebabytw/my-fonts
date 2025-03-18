@@ -81,9 +81,9 @@ body {
 /* 預覽區 */
 .preview-area {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 讓預覽框維持 2 欄 */
+    grid-template-columns: repeat(2, 220px); /* 讓預覽框維持 2 欄 */
     gap: 10px;
-    margin-top: 20px; /* 讓內容有間距 */
+    margin-top: 40px; /* 讓內容有間距 */
     width: 100%;
     max-width: 500px;
     flex-grow: 1; /* 讓內容可以撐滿可用空間 */
