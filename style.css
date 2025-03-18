@@ -41,10 +41,10 @@ body {
 
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
-    position: absolute; /* 讓白色框根據畫面絕對定位 */
-    top: 65%; /* 讓白色框的頂部在畫面的 50% 位置 */
-    left: 50%; /* 讓白色框水平置中 */
-    transform: translate(-50%, -25%); /* 水平 & 垂直置中 */
+    position: absolute;
+    top: 60%; /* 讓白色框的頂部比 50% 更低 */
+    left: 50%;
+    transform: translate(-50%, -30%); /* 減少上移的位移 */
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -117,10 +117,12 @@ body {
         min-height: calc(200vw * 2); /* 讓手機高度符合圖片長度 */
     }
 
-    .overlay-content {
-        width: 90%;
-        top: 10%; /* 手機版調整內容區塊位置 */
+   .overlay-content {
+        top: 65%; /* 手機版的白色框往下移更多 */
+        transform: translate(-50%, -25%); /* 避免它跑回去 */
     }
+}
+
    .preview-area {
         grid-template-columns: repeat(2, 1fr); /* 即使是手機版也保持 2 欄 */
     }
@@ -140,9 +142,11 @@ body {
         height: 200vh; /* 確保電腦版滾到底時，剛好是圖片底部 */
     }
 
-    .overlay-content {
-        top: 65%;
+ .overlay-content {
+        top: 55%; /* 桌機版的白色框再往下移 */
+        transform: translate(-50%, -35%);
     }
+}
 
     .preview-box {
         width: 30%;
