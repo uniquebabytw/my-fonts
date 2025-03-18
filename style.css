@@ -82,7 +82,7 @@ body {
 .preview-area {
     display: grid;
     grid-template-columns: repeat(2, 550px); /* 讓預覽框維持 2 欄 */
-    gap: 10px;
+    gap: 2px;
     margin-top: 100px; /* 讓內容有間距 */
     width: 100%;
     max-width: 500px;
@@ -93,7 +93,7 @@ body {
 /* 預覽框 */
 .preview-box {
     background: white;
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
     display: flex;
     flex-direction: column-reverse;
