@@ -81,7 +81,7 @@ body {
 /* 預覽區 */
 .preview-area {
     display: grid;
-    grid-template-columns: repeat(2, 600px); /* 讓預覽框維持 2 欄 */
+    grid-template-columns: repeat(2, 550px); /* 讓預覽框維持 2 欄 */
     gap: 10px;
     margin-top: 100px; /* 讓內容有間距 */
     width: 100%;
@@ -124,7 +124,7 @@ body {
 }
 
    .preview-area {
-        grid-template-columns: repeat(2, 600px); /* 即使是手機版也保持 2 欄 */
+        grid-template-columns: repeat(2, 550px); /* 即使是手機版也保持 2 欄 */
     }
 
     .preview-box {
