@@ -124,7 +124,7 @@ body {
 }
 
    .preview-area {
-        grid-template-columns: repeat(2, 1fr); /* 即使是手機版也保持 2 欄 */
+        grid-template-columns: repeat(2, 220px); /* 即使是手機版也保持 2 欄 */
     }
 
     .preview-box {
