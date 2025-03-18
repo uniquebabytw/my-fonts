@@ -130,7 +130,7 @@ body {
     }
 
    .overlay-content {
-        top: 65%; /* 手機版的白色框往下移更多 */
+        top: 75%; /* 手機版的白色框往下移更多 */
         transform: translate(-50%, -25%); /* 避免它跑回去 */
     }
 }
