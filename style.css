@@ -41,31 +41,23 @@ body {
 
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
-    position: absolute;
-    bottom: 0; /* 讓白色框的下緣對齊手機畫面的底部 */
+    position: relative; /* 讓白色框跟隨頁面流動 */
+    top: auto;
     left: 50%;
-    transform: translateX(-50%); /* 水平置中 */
+    transform: translateX(-50%);
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     width: 80%;
     max-width: 500px;
-    min-height: 50vh; /* 最小高度設定，避免內容太少時白框太小 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 讓內容保持在白框內的中心 */
+    margin-top: 4rem; /* 設定輸入框與白色框之間的距離（2行 = 4rem） */
 }
 
 .input-wrapper {
-    padding: 10px; /* 保留內距，讓輸入框不會緊貼邊緣 */
-    position: absolute;
-    top: 50%; /* 放在最上方 */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 450px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh; /* 調整輸入框與畫面上方的距離 */
 }
 
 /* 讓輸入框靠近上方 */
