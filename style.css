@@ -110,6 +110,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'GirlFont', 'ChildWindFont', 'InkFont', sans-serif;
+}
+
+.preview-text::before {
+    content: '無法支援';
+    display: none;
+}
+
+.preview-text:has(span:empty)::before {
+    display: inline;
 }
 
 /* 📱 手機版調整 */
