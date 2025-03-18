@@ -44,7 +44,7 @@ body {
     position: absolute; /* 讓白色框根據畫面絕對定位 */
     top: 80%; /* 讓白色框的頂部在畫面的 50% 位置 */
     left: 50%; /* 讓白色框水平置中 */
-    transform: translate(-50%, -10%); /* 水平 & 垂直置中 */
+    transform: translate(-50%, -30%); /* 水平 & 垂直置中 */
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -55,7 +55,7 @@ body {
 
 .input-wrapper {
     position: absolute;
-    top: 80%; /* 讓輸入框始終靠近畫面上方 */
+    top: 35%; /* 讓輸入框始終靠近畫面上方 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
