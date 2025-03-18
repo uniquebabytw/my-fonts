@@ -55,7 +55,7 @@ body {
 
 .input-wrapper {
     position: absolute;
-    top: 65%; /* 讓輸入框始終靠近畫面上方 */
+    top: 25%; /* 讓輸入框始終靠近畫面上方 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
