@@ -81,11 +81,11 @@ body {
 /* 預覽區 */
 .preview-area {
     display: grid;
-    grid-template-columns: repeat(2, 550px); /* 讓預覽框維持 2 欄 */
-    gap: 2px;
+    grid-template-columns: repeat(2, 500px); /* 讓預覽框維持 2 欄 */
+    gap: 20px;
     margin-top: 100px; /* 讓內容有間距 */
     width: 100%;
-    max-width: 500px;
+    max-width: 100px;
     flex-grow: 1; /* 讓內容可以撐滿可用空間 */
     align-items: center; /* 讓內容在白框內對齊 */
 }
