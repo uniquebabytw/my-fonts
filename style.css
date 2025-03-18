@@ -42,9 +42,9 @@ body {
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
     position: absolute;
-    top: 50vh; /* 調整到螢幕一半高度，大約在 "GOODS SALE" 位置 */
+    top: 20vh; /* 調整到螢幕一半高度，大約在 "GOODS SALE" 位置 */
     left: 50%;
-    transform: translate(-50%, -50%); /* 確保內容水平 & 垂直對齊 */
+    transform: translate(-50%); /* 確保內容水平 & 垂直對齊 */
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
