@@ -110,6 +110,21 @@ body {
     justify-content: center;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between; /* 讓欄位平均分布 */
+    align-items: center;
+    width: 100%;
+}
+
+.column {
+    flex: 1; /* 讓兩個欄位平均分配空間 */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
 /* 📱 手機版調整 */
 @media screen and (max-width: 768px) {
     body {
@@ -133,6 +148,9 @@ body {
 
     .preview-text {
         font-size: 28px; /* 讓手機版的預覽文字稍微縮小 */
+    }
+    .column {
+        flex-basis: 50%; /* 每個欄位佔 50% */
     }
 }
     
