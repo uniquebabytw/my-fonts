@@ -122,47 +122,6 @@ body {
     display: inline;
 }
 
-/* 📱 手機版調整 */
-@media screen and (max-width: 768px) {
-    body {
-        height: auto; /* 讓 JS 設定高度 */
-        min-height: calc(200vw * 2); /* 讓手機高度符合圖片長度 */
-    }
-
-   .overlay-content {
-        top: 75%; /* 手機版的白色框往下移更多 */
-        transform: translate(-50%, -25%); /* 避免它跑回去 */
-    }
-}
-
-   .preview-area {
-        grid-template-columns: repeat(2, 350px);/* 即使是手機版也保持 2 欄 */
-        gap: 5px; /* 手機版讓框更接近 */
-    }
-
-    .preview-box {
-        height: 120px; /* 降低高度，避免手機畫面太擠 */
-    }
-
-    .preview-text {
-        font-size: 28px; /* 讓手機版的預覽文字稍微縮小 */
-    }
-    .input-wrapper {
-        top: 28%; /* 手機版微調 */
-    }
-}
-    
-/* 💻 電腦版調整 */
-@media screen and (min-width: 1200px) {
-    body {
-        height: 200vh; /* 確保電腦版滾到底時，剛好是圖片底部 */
-    }
-
- .overlay-content {
-        top: 85%; /* 桌機版的白色框再往下移 */
-        transform: translate(-50%, -65%);
-    }
-}
 
     .preview-box {
         width: 30%;
