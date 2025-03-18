@@ -155,7 +155,7 @@ body {
     }
 
  .overlay-content {
-        top: 55%; /* 桌機版的白色框再往下移 */
+        top: 85%; /* 桌機版的白色框再往下移 */
         transform: translate(-50%, -35%);
     }
 }
