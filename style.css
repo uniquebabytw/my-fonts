@@ -55,7 +55,7 @@ body {
 
 .input-wrapper {
     position: absolute;
-    top: 45%; /* 讓輸入框始終靠近畫面上方 */
+    top: 28%; /* 讓輸入框始終靠近畫面上方 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -146,7 +146,7 @@ body {
     .preview-text {
         font-size: 28px; /* 讓手機版的預覽文字稍微縮小 */
     }
-    .top: 50%; /* 手機版讓輸入框再往下移，原本是 35% */
+    .top: 30%; /* 手機版讓輸入框再往下移，原本是 35% */
     }
 }
     
@@ -158,7 +158,7 @@ body {
 
  .overlay-content {
         top: 85%; /* 桌機版的白色框再往下移 */
-        transform: translate(-50%, -35%);
+        transform: translate(-50%, -65%);
     }
 }
 
