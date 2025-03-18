@@ -42,15 +42,19 @@ body {
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
     position: absolute;
-    top: 20vh; /* 調整到螢幕一半高度，大約在 "GOODS SALE" 位置 */
+    bottom: 0; /* 讓白色框的下緣對齊手機畫面的底部 */
     left: 50%;
-    transform: translate(-50%); /* 確保內容水平 & 垂直對齊 */
+    transform: translateX(-50%); /* 水平置中 */
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     width: 80%;
     max-width: 500px;
+    min-height: 50vh; /* 最小高度設定，避免內容太少時白框太小 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 讓內容保持在白框內的中心 */
 }
 
 .input-wrapper {
@@ -82,12 +86,13 @@ body {
 /* 預覽區 */
 .preview-area {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 讓預覽框始終維持 2 欄 */
+    grid-template-columns: repeat(2, 1fr); /* 讓預覽框維持 2 欄 */
     gap: 10px;
-    margin-top: 20px; /* 增加間距 */
+    margin-top: 20px; /* 讓內容有間距 */
     width: 100%;
     max-width: 500px;
-    justify-content: center;
+    flex-grow: 1; /* 讓內容可以撐滿可用空間 */
+    align-items: center; /* 讓內容在白框內對齊 */
 }
 
 /* 預覽框 */
