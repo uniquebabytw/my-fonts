@@ -42,7 +42,7 @@ body {
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
     position: absolute; /* 讓白色框根據畫面絕對定位 */
-    top: 80%; /* 讓白色框的頂部在畫面的 50% 位置 */
+    top: 10%; /* 讓白色框的頂部在畫面的 50% 位置 */
     left: 50%; /* 讓白色框水平置中 */
     transform: translate(-50%, -30%); /* 水平 & 垂直置中 */
     text-align: center;
@@ -119,7 +119,7 @@ body {
 
     .overlay-content {
         width: 90%;
-        top: 15%; /* 手機版調整內容區塊位置 */
+        top: 10%; /* 手機版調整內容區塊位置 */
     }
    .preview-area {
         grid-template-columns: repeat(2, 1fr); /* 即使是手機版也保持 2 欄 */
