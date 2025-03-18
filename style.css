@@ -42,7 +42,7 @@ body {
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
     position: absolute;
-    top: 60%; /* 讓白色框的頂部比 50% 更低 */
+    top: 40%; /* 讓白色框的頂部比 50% 更低 */
     left: 50%;
     transform: translate(-50%, -30%); /* 減少上移的位移 */
     text-align: center;
@@ -99,6 +99,8 @@ body {
     flex-direction: column-reverse;
     height: 150px;
     text-align: center;
+    position: relative;
+    top: -10px; /* 負值讓它往上移 */
 }
 
 /* 預覽文字 */
