@@ -42,7 +42,7 @@ body {
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
     position: absolute;
-    top: 40%; /* 讓白色框的頂部比 50% 更低 */
+    top: 70%; /* 讓白色框的頂部比 50% 更低 */
     left: 50%;
     transform: translate(-50%, -30%); /* 減少上移的位移 */
     text-align: center;
