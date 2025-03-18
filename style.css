@@ -42,12 +42,11 @@ body {
 /* 讓內容浮在背景圖片上，不會跑到底部 */
 .overlay-content {
     position: absolute;
-    top: 90%; /* 調整內容區塊位置 */
+    top: 50vh; /* 調整到螢幕一半高度，大約在 "GOODS SALE" 位置 */
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
+    transform: translate(-50%, -50%); /* 確保內容水平 & 垂直對齊 */
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* 半透明白色背景，提高可讀性 */
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     width: 80%;
@@ -83,11 +82,11 @@ body {
 /* 預覽區 */
 .preview-area {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 始終維持 2 欄 */
+    grid-template-columns: repeat(2, 1fr); /* 讓預覽框始終維持 2 欄 */
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 20px; /* 增加間距 */
     width: 100%;
-    max-width: 500px; /* 限制最大寬度，避免太寬 */
+    max-width: 500px;
     justify-content: center;
 }
 
