@@ -44,7 +44,7 @@ body {
     position: absolute; /* 讓白色框根據畫面絕對定位 */
     top: 80%; /* 讓白色框的頂部在畫面的 50% 位置 */
     left: 50%; /* 讓白色框水平置中 */
-    transform: translate(-50%, -50%); /* 水平 & 垂直置中 */
+    transform: translate(-50%, -30%); /* 水平 & 垂直置中 */
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
