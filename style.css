@@ -256,9 +256,9 @@ top: -5px; /* 往上 5px (可自行調整) */
   font-family: '宅在家自動筆20231015', sans-serif; font-size: 25px;
 }
 
-/* 讓「字型10」的框內 main-text 使用 ThePeakFontBeta_V0_102 */
+/* 讓「字型10」的框內 main-text 使用 KosefontP-JP */
 .two-col-boxes .column:last-child .box:nth-child(5) .main-text {
-  font-family: 'ThePeakFontBeta_V0_102', sans-serif;
+  font-family: 'KosefontP-JP', sans-serif;
   font-size: 30px;
 }
 
