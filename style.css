@@ -6,8 +6,8 @@
 }
 
 @font-face {
-    font-family: 'jf-openhuninn-2.1';
-    src: url('jf-openhuninn-2.1.woff2') format('woff2'); 
+    font-family: '王汉宗中圆体繁';
+    src: url('王汉宗中圆体繁.woff2') format('woff2'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -236,9 +236,9 @@ top: -5px; /* 往上 5px (可自行調整) */
   font-weight: bold;
 }
 
-/* 讓「字型2」的框內 main-text 使用 jf-openhuninn-2.1 */
+/* 讓「字型2」的框內 main-text 使用 王汉宗中圆体繁 */
 .two-col-boxes .column:last-child .box:nth-child(1) .main-text {
-  font-family: 'jf-openhuninn-2.1', sans-serif;
+  font-family: '王汉宗中圆体繁', sans-serif;
 }
 
 /* 讓「字型4」的框內 main-text 使用 Mamelon */
