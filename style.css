@@ -48,8 +48,8 @@
 }
 
 @font-face {
-  font-family: '宅在家自動筆20231015';
-  src: url('宅在家自動筆20231015.woff2') format('woff2');
+  font-family: 'KosefontP-JP';
+  src: url('KosefontP-JP.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -62,8 +62,8 @@
 }
 
 @font-face {
-  font-family: 'KosefontP-JP';
-  src: url('KosefontP-JP.woff2') format('woff2');
+  font-family: '宅在家自動筆20231015';
+  src: url('宅在家自動筆20231015.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -251,15 +251,15 @@ top: -5px; /* 往上 5px (可自行調整) */
   font-weight: bold;
 }
 
-/* 讓「字型8」的框內 main-text 使用 宅在家自動筆20231015 */
+/* 讓「字型8」的框內 main-text 使用 KosefontP-JP */
 .two-col-boxes .column:last-child .box:nth-child(4) .main-text {
-  font-family: '宅在家自動筆20231015', sans-serif; font-size: 25px;
-}
-
-/* 讓「字型10」的框內 main-text 使用 KosefontP-JP */
-.two-col-boxes .column:last-child .box:nth-child(5) .main-text {
   font-family: 'KosefontP-JP', sans-serif;
   font-size: 30px;
+}
+
+/* 讓「字型10」的框內 main-text 使用 宅在家自動筆20231015 */
+.two-col-boxes .column:last-child .box:nth-child(5) .main-text {
+  font-family: '宅在家自動筆20231015', sans-serif; font-size: 25px;
 }
 
 /* 讓「字型12」的框內 main-text 改用 BpmfGenSenRounded-M */
