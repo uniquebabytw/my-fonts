@@ -13,8 +13,8 @@
 }
 
 @font-face {
-  font-family: 'wt071';
-  src: url('wt071.woff2') format('woff2');
+  font-family: '王汉宗行楷体繁';
+  src: url('王汉宗行楷体繁.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -208,9 +208,9 @@ html, body {
   font-size: 28px;
 }
 
-/* 讓「字型3」的框內 main-text 使用 wt071 */
+/* 讓「字型3」的框內 main-text 使用 王汉宗行楷体繁 */
 .two-col-boxes .column:first-child .box:nth-child(2) .main-text {
-  font-family: 'wt071', sans-serif;
+  font-family: '王汉宗行楷体繁', sans-serif;
 top: -5px; /* 往上 5px (可自行調整) */ 
 }
 
