@@ -1,85 +1,50 @@
 @font-face {
     font-family: 'LXGWMarkerGothic-Regular';
     src: url('LXGWMarkerGothic-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
 }
-
 @font-face {
   font-family: 'PopGothicCjkTc-Regular';
   src: url('PopGothicCjkTc-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
   font-family: '王汉宗行楷体繁';
   src: url('王汉宗行楷体繁.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
   font-family: 'edukai-5.0';
   src: url('edukai-5.0.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
   font-family: 'NotoSansTC-Regular';
   src: url('NotoSansTC-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
   font-family: 'wt021';
   src: url('wt021.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
-    font-family: '王漢宗中圓體繁';
-    src: url('王漢宗中圓體繁.woff2') format('woff2'); 
-    font-weight: normal;
-    font-style: normal;
+  font-family: '王漢宗中圓體繁';
+  src: url('王漢宗中圓體繁.woff2') format('woff2');
 }
-
 @font-face {
   font-family: 'KosefontP-JP';
   src: url('KosefontP-JP.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
   font-family: 'Mamelon';
   src: url('Mamelon.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
   font-family: '宅在家自動筆20231015';
   src: url('宅在家自動筆20231015.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
   font-family: 'wp010-08';
   src: url('wp010-08.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
-
 @font-face {
   font-family: 'BpmfGenSenRounded-M';
   src: url('BpmfGenSenRounded-M.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* 1) 重置 */
@@ -203,69 +168,43 @@ html, body {
   margin: 0;              /* 移除預設的段落外距，如需要 */
 }
 
-.preview-text .main-text {
-  font-family: 'LXGWMarkerGothic-Regular', sans-serif;
-  font-size: 28px;
+.main-text {
+  font-family: 'LXGWMarkerGothic-Regular', Arial, sans-serif;
 }
 
-/* 讓「字型3」的框內 main-text 使用 王汉宗行楷体繁 */
+/* 各框專屬字型設定 */
 .two-col-boxes .column:first-child .box:nth-child(2) .main-text {
-  font-family: '王汉宗行楷体繁', sans-serif;
-top: -5px; /* 往上 5px (可自行調整) */ 
+  font-family: '王汉宗行楷体繁', Arial, sans-serif;
 }
-
-/* 讓「字型5」的框內 main-text 使用 NotoSansTC-Regular */
 .two-col-boxes .column:first-child .box:nth-child(3) .main-text {
-  font-family: 'NotoSansTC-Regular', sans-serif;
+  font-family: 'NotoSansTC-Regular', Arial, sans-serif;
 }
-
-/* 讓「字型7」的框內main-text 使用 王漢宗中圓體繁 */
 .two-col-boxes .column:first-child .box:nth-child(4) .main-text {
-  font-family: '王漢宗中圓體繁', sans-serif;
+  font-family: '王漢宗中圓體繁', Arial, sans-serif;
 }
-
-/* 讓「字型9」的框內main-text 使用 Mamelon */
 .two-col-boxes .column:first-child .box:nth-child(5) .main-text {
-  font-family: 'Mamelon', sans-serif;
+  font-family: 'Mamelon', Arial, sans-serif;
 }
-
-/* 讓「字型11」的框內 main-text 使用 wt021 */
 .two-col-boxes .column:first-child .box:last-child .main-text {
-  font-family: 'wt021', sans-serif;
+  font-family: 'wt021', Arial, sans-serif;
 }
-
-/* 讓「字型2」的框內 main-text 使用 PopGothicCjkTc */
 .two-col-boxes .column:last-child .box:nth-child(1) .main-text {
-  font-family: 'PopGothicCjkTc-Regular', sans-serif;
-} 
-
-/* 讓「字型4」的框內 main-text 使用 edukai-5.0 */
+  font-family: 'PopGothicCjkTc-Regular', Arial, sans-serif;
+}
 .two-col-boxes .column:last-child .box:nth-child(2) .main-text {
-  font-family: 'edukai-5.0', sans-serif;
-} 
-
-/* 讓「字型6」的框內 main-text 改用 wp010-08 */
+  font-family: 'edukai-5.0', Arial, sans-serif;
+}
 .two-col-boxes .column:last-child .box:nth-child(3) .main-text {
-  font-family: 'wp010-08', sans-serif;
-  font-size: 22px;
-  font-weight: bold;
+  font-family: 'wp010-08', Arial, sans-serif;
 }
-
-/* 讓「字型8」的框內 main-text 使用 KosefontP-JP */
 .two-col-boxes .column:last-child .box:nth-child(4) .main-text {
-  font-family: 'KosefontP-JP', sans-serif;
-  font-size: 30px;
+  font-family: 'KosefontP-JP', Arial, sans-serif;
 }
-
-/* 讓「字型10」的框內 main-text 使用 宅在家自動筆20231015 */
 .two-col-boxes .column:last-child .box:nth-child(5) .main-text {
-  font-family: '宅在家自動筆20231015', sans-serif; font-size: 25px;
+  font-family: '宅在家自動筆20231015', Arial, sans-serif;
 }
-
-/* 讓「字型12」的框內 main-text 改用 BpmfGenSenRounded-M */
 .two-col-boxes .column:last-child .box:last-child .main-text {
-  font-family: 'BpmfGenSenRounded-M', sans-serif;
-  font-size: 21px;
+  font-family: 'BpmfGenSenRounded-M', Arial, sans-serif;
 }
 
 .main-text {
