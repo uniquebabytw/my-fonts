@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1️⃣ 檢查字型載入
+  const inputName = document.getElementById("nameInput");
+
+  // 🔍 字型載入檢查（初始狀態用）
   const fontsToCheck = [
     'LXGWMarkerGothic-Regular',
     'PopGothicCjkTc-Regular',
@@ -28,20 +30,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 2️⃣ 處理使用者輸入
-  const inputName = document.getElementById("nameInput");
+  // ✨ 判斷該字型是否真的能渲染某文字
+  function isFontSupported(text, font) {
+    const fallback = 'Arial';
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    context.font = `40px '${font}'`;
+    const widthTarget = context.measureText(text).width;
 
-  inputName.addEventListener("input", () => {
-    const typedValue = inputName.value.trim();
+    context.font = `40px '${fallback}'`;
+    const widthFallback = context.measureText(text).width;
+
+    return Math.abs(widthTarget - widthFallback) > 0.5;
+  }
+
+  // 🔄 更新畫面顯示文字
+  function updatePreviewText(value) {
+    const typedValue = value.trim();
     document.querySelectorAll(".main-text").forEach(element => {
+      const font = getComputedStyle(element).fontFamily.split(',')[0].replace(/["']/g, '').trim();
       if (typedValue === "") {
         element.textContent = "預覽字型";
         element.classList.add("placeholder-text");
       } else {
-        element.textContent = typedValue;
-        element.classList.remove("placeholder-text");
+        if (isFontSupported(typedValue, font)) {
+          element.textContent = typedValue;
+          element.classList.remove("placeholder-text");
+        } else {
+          element.textContent = "無法支援";
+          element.classList.add("placeholder-text");
+        }
       }
     });
-  });
-});
-
