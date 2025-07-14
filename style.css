@@ -333,4 +333,9 @@ top: -5px; /* 往上 5px (可自行調整) */
     left: 50%;
     transform: translate(-25%, -45%);
   }
+/* 如果字型無法支援時的樣式（可自行調整顏色等） */
+.unsupported {
+  font-family: "Noto Sans TC", sans-serif;   /* 隨便找一套一定有的字型即可 */
+  color: #d00;                               /* 讓使用者一眼看出來 */
+}
 }
