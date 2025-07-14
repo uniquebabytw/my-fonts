@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const inputName = document.getElementById("nameInput");
 
-  // 🔍 字型載入檢查（初始狀態用）
-  const fontsToCheck = [ ... ];
-
   function isFontSupported(text, font) {
     const fallback = 'Arial';
     const canvas = document.createElement('canvas');
@@ -34,16 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 🔧 補上的觸發部分：
-  updatePreviewText("");
-  inputName.addEventListener("input", (e) => {
-    updatePreviewText(e.target.value);
-  });
-});
-
-document.fonts.ready.then(() => {
-  updatePreviewText("");
-  inputName.addEventListener("input", (e) => {
-    updatePreviewText(e.target.value);
+  // ⏳ 等待字型全部載入後再執行
+  document.fonts.ready.then(() => {
+    updatePreviewText(""); // 初次執行預設
+    inputName.addEventListener("input", (e) => {
+      updatePreviewText(e.target.value); // 使用者輸入更新
+    });
   });
 });
