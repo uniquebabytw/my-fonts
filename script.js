@@ -4,19 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔍 字型載入檢查（初始狀態用）
   const fontsToCheck = [ ... ];
 
-  fontsToCheck.forEach(fontName => {
-    document.fonts.load(`16px '${fontName}'`).then(fonts => {
-      if (fonts.length === 0) {
-        document.querySelectorAll(".main-text").forEach(el => {
-          if (getComputedStyle(el).fontFamily.includes(fontName)) {
-            el.textContent = "無法支援";
-            el.classList.add("placeholder-text");
-          }
-        });
-      }
-    });
-  });
-
   function isFontSupported(text, font) {
     const fallback = 'Arial';
     const canvas = document.createElement('canvas');
