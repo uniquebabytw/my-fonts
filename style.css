@@ -1,50 +1,337 @@
-/*****************************************************************
- * 功能：輸入文字後，逐一檢查每個框對應字型是否支援該文字。
- *       - 若支援 → 顯示使用者輸入
- *       - 不支援 → 顯示「無法支援」
- *****************************************************************/
-document.addEventListener('DOMContentLoaded', () => {
-  const inputName  = document.getElementById('nameInput');
-  const mainTexts  = document.querySelectorAll('.main-text');
+@font-face {
+    font-family: 'LXGWMarkerGothic-Regular';
+    src: url('LXGWMarkerGothic-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
-  // 取得第一個 font-family 名稱（去掉引號與空白）
-  const getPrimaryFont = (fontFamilyString) =>
-    fontFamilyString.split(',')[0].replace(/["']/g, '').trim();
+@font-face {
+  font-family: 'PopGothicCjkTc-Regular';
+  src: url('PopGothicCjkTc-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  // 利用 CSS Font Loading API 檢查字型是否能呈現文字
-  const isFontSupported = (text, font) => {
-    // 若瀏覽器不支援 Font Loading API，直接返回 true
-    if (!(document.fonts && document.fonts.check)) return true;
-    // 檢查字型是否含有所有字元
-    return document.fonts.check(`16px "${font}"`, text);
-  };
+@font-face {
+  font-family: '王汉宗行楷体繁';
+  src: url('王汉宗行楷体繁.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  // 更新所有預覽框
-  const updatePreviews = (value) => {
-    mainTexts.forEach(el => {
-      if (value === '') {
-        // 空字串 → 顯示預設提示文字
-        el.textContent = '預覽字型';
-        el.classList.add('placeholder-text');
-        return;
-      }
+@font-face {
+  font-family: 'edukai-5.0';
+  src: url('edukai-5.0.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-      // 取該框的主要字型
-      const primaryFont = getPrimaryFont(getComputedStyle(el).fontFamily);
-      const supported   = isFontSupported(value, primaryFont);
+@font-face {
+  font-family: 'NotoSansTC-Regular';
+  src: url('NotoSansTC-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-      el.textContent = supported ? value : '無法支援';
-      el.classList.remove('placeholder-text');
-    });
-  };
+@font-face {
+  font-family: 'wt021';
+  src: url('wt021.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  // 監聽輸入框
-  inputName.addEventListener('input', () => {
-    updatePreviews(inputName.value.trim());
-  });
+@font-face {
+    font-family: '王漢宗中圓體繁';
+    src: url('王漢宗中圓體繁.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: normal;
+}
 
-  // 字型檔載入完畢後，再試一次以避免「載入前誤判」
-  document.fonts.ready.then(() => {
-    updatePreviews(inputName.value.trim());
-  });
-});
+@font-face {
+  font-family: 'KosefontP-JP';
+  src: url('KosefontP-JP.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mamelon';
+  src: url('Mamelon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '宅在家自動筆20231015';
+  src: url('宅在家自動筆20231015.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'wp010-08';
+  src: url('wp010-08.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BpmfGenSenRounded-M';
+  src: url('BpmfGenSenRounded-M.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 1) 重置 */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 2) 父容器不固定高度，由圖片決定 */
+.background-container {
+  position: relative;
+  width: 100%;
+}
+
+/* 3) 圖片鋪滿寬度 */
+.background-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 4) 上方浮在圖片的白色半透明框 */
+.overlay-text {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.7);
+  color: #888;
+  padding: 15px 20px;
+  border-radius: 25px;
+  text-align: center;
+  z-index: 1;
+}
+
+.overlay-text h1 {
+  margin: 0;
+  font-size: 16px;
+  color: #888;
+}
+
+.overlay-text input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 20px 15px 20px 15px;
+  font-size: 16px;
+  color: #666;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ★ 下方 2 欄 (left / right) 採絕對定位 */
+.two-col-boxes {
+  position: absolute;
+  top: 70%;            /* 下方框與上方透明框的距離 */
+  left: 47%;           /* 往左些，可依需求調整 */
+  transform: translate(-50%, -48%);
+  display: flex;       /* 左欄、右欄 並排 */
+  gap: 30px;           /* 欄之間的距離 */
+  z-index: 1;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  /* ★ 關鍵：強制單行顯示，避免自動換行 */
+  white-space: nowrap;
+}
+
+/* ★ 每欄上下 2 框 → 用 flex column，並加 gap 控制上下距離 */
+.two-col-boxes .column {
+  display: flex;
+  flex-direction: column; 
+  gap: 22px; /* 上/下框之間的距離，可自行調整 */
+}
+
+.two-col-boxes .box {
+    flex: none;
+    width: 130px; /* 框的寬度 */
+    height: 100px; /* 框的高度 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 70%, white 30%); /* 70% 透明，底部 30% 白色 */
+    border: 4px solid white; /* 白色邊框 */
+    border-radius: 3px; /* 圓角 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 讓內部元素能正確定位 (偽元素也依附這裡) */
+}
+
+/* 左上角的圓洞裝飾 */
+.two-col-boxes .box::before {
+    content: "";
+    position: absolute;
+    top: 5px; /* 距離上邊緣 */
+    left: 6px; /* 距離左邊緣 */
+    width: 15px; /* 圓洞的大小 */
+    height: 15px; /* 圓洞的大小 */
+    background: #9bc8fb; /* 圓洞顏色 */
+    border-radius: 50%; /* 讓它變成圓形 */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* 讓圓洞有凹陷感 */
+}
+
+/* 文字大小/顏色可依需求 */
+.two-col-boxes .box p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #666;
+}
+
+.preview-text {
+  display: flex;
+  flex-direction: column; /* 讓文字垂直排列 */
+  align-items: center;    /* 水平置中 */
+  justify-content: center;/* 垂直置中 */
+  text-align: center;     /* 文字置中 */
+  height: 100%;           /* 讓 p 撐滿父容器 (box) */
+  margin: 0;              /* 移除預設的段落外距，如需要 */
+}
+
+.preview-text .main-text {
+  font-family: 'LXGWMarkerGothic-Regular', sans-serif;
+  font-size: 28px;
+}
+
+/* 讓「字型3」的框內 main-text 使用 王汉宗行楷体繁 */
+.two-col-boxes .column:first-child .box:nth-child(2) .main-text {
+  font-family: '王汉宗行楷体繁', sans-serif;
+top: -5px; /* 往上 5px (可自行調整) */ 
+}
+
+/* 讓「字型5」的框內 main-text 使用 NotoSansTC-Regular */
+.two-col-boxes .column:first-child .box:nth-child(3) .main-text {
+  font-family: 'NotoSansTC-Regular', sans-serif;
+}
+
+/* 讓「字型7」的框內main-text 使用 王漢宗中圓體繁 */
+.two-col-boxes .column:first-child .box:nth-child(4) .main-text {
+  font-family: '王漢宗中圓體繁', sans-serif;
+}
+
+/* 讓「字型9」的框內main-text 使用 Mamelon */
+.two-col-boxes .column:first-child .box:nth-child(5) .main-text {
+  font-family: 'Mamelon', sans-serif;
+}
+
+/* 讓「字型11」的框內 main-text 使用 wt021 */
+.two-col-boxes .column:first-child .box:last-child .main-text {
+  font-family: 'wt021', sans-serif;
+}
+
+/* 讓「字型2」的框內 main-text 使用 PopGothicCjkTc */
+.two-col-boxes .column:last-child .box:nth-child(1) .main-text {
+  font-family: 'PopGothicCjkTc-Regular', sans-serif;
+} 
+
+/* 讓「字型4」的框內 main-text 使用 edukai-5.0 */
+.two-col-boxes .column:last-child .box:nth-child(2) .main-text {
+  font-family: 'edukai-5.0', sans-serif;
+} 
+
+/* 讓「字型6」的框內 main-text 改用 wp010-08 */
+.two-col-boxes .column:last-child .box:nth-child(3) .main-text {
+  font-family: 'wp010-08', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* 讓「字型8」的框內 main-text 使用 KosefontP-JP */
+.two-col-boxes .column:last-child .box:nth-child(4) .main-text {
+  font-family: 'KosefontP-JP', sans-serif;
+  font-size: 30px;
+}
+
+/* 讓「字型10」的框內 main-text 使用 宅在家自動筆20231015 */
+.two-col-boxes .column:last-child .box:nth-child(5) .main-text {
+  font-family: '宅在家自動筆20231015', sans-serif; font-size: 25px;
+}
+
+/* 讓「字型12」的框內 main-text 改用 BpmfGenSenRounded-M */
+.two-col-boxes .column:last-child .box:last-child .main-text {
+  font-family: 'BpmfGenSenRounded-M', sans-serif;
+  font-size: 21px;
+}
+
+.main-text {
+  font-size: 35px;
+  font-weight: normal;
+  color: black;
+  transition: color 0.3s ease;
+  margin-top: 26px;
+}
+
+.sub-text {
+  font-size: 20px; 
+  font-weight: bold; 
+  color: #5151A2;
+  margin-top: 27px;
+}
+
+.placeholder-text {
+  position: relative;
+  top: -8x;   /* 往上移 10px, 可自行調整 */
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+/* === 在每個 .box 底端半透明區域顯示 "UniQue Baby" === */
+.two-col-boxes .box::after {
+  content: "UniQue Baby";
+  position: absolute;
+  /* 70% 對應於漸層: rgba(255,255,255,0.6) 70% → white 30% */
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  pointer-events: none; /* 不阻擋滑鼠操作 */
+}
+
+/* 手機 (max-width: 768px) 保持原本設定 */
+@media (max-width: 768px) {
+  .overlay-text {
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .two-col-boxes {
+    top: 52%;
+    left: 48%;
+    transform: translate(-50%, -48%);
+  }
+}
+
+/* 桌機 (min-width: 769px) 再做調整 */
+@media (min-width: 769px) {
+  .overlay-text {
+    /* 你可視需求調整，以下只是示範 */
+    top: 15%;
+    left: 40%;
+    transform: translate(-10%, -60%);
+  }
+  .two-col-boxes {
+    /* 桌機螢幕一般較寬，所以可把整塊再往下些 */
+    top: 25%;
+    left: 50%;
+    transform: translate(-25%, -45%);
+  }
+}
+
