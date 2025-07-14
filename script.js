@@ -27,7 +27,6 @@ inputName.addEventListener("input", function () {
   'wp010-08',
   'BpmfGenSenRounded-M'
 ];
-
 // 檢查字型是否成功載入
 fontsToCheck.forEach(fontName => {
   document.fonts.load(`16px '${fontName}'`).then(fonts => {
