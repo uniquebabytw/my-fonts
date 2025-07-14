@@ -9,20 +9,22 @@
 </head>
 <body>
   <div class="background-container">
-   <img src="background.png" alt="背景圖片" />
+    <img src="background.png" alt="背景圖片" />
+
     <!-- 上方浮在圖片之上的白色半透明框 -->
     <div class="overlay-text">
       <h1>您寶貝的名字</h1>
       <input type="text" id="nameInput" placeholder="請在此輸入....">
     </div>
+
     <!-- 下方 2 欄，並在每欄放 6 個 "白色透明框" -->
     <div class="two-col-boxes">
       <!-- 左欄：6 個框 -->
       <div class="column">
         <div class="box">
           <p class="preview-text">
-          <span class="main-text placeholder-text">預覽字型</span>
-          <span class="sub-text">字型1</span>
+            <span class="main-text placeholder-text">預覽字型</span>
+            <span class="sub-text">字型1</span>
           </p>
         </div>
         <div class="box">
@@ -56,6 +58,7 @@
           </p>
         </div>
       </div>
+
       <!-- 右欄：6 個框 -->
       <div class="column">
         <div class="box">
@@ -97,6 +100,9 @@
       </div>
     </div>
   </div>
-<script src="script.js" defer></script>
+
+  <!-- ⬇ 新增偵測機制都寫在這支 JS ⬇ -->
+  <script src="script.js" defer></script>
 </body>
 </html>
+
