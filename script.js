@@ -40,3 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
     updatePreviewText(e.target.value);
   });
 });
+
+document.fonts.ready.then(() => {
+  updatePreviewText("");
+  inputName.addEventListener("input", (e) => {
+    updatePreviewText(e.target.value);
+  });
+});
