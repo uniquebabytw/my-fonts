@@ -204,67 +204,67 @@ html, body {
 }
 
 .preview-text .main-text {
-  font-family: 'LXGWMarkerGothic-Regular';
+  font-family: 'LXGWMarkerGothic-Regular', sans-serif;
   font-size: 28px;
 }
 
 /* 讓「字型3」的框內 main-text 使用 王汉宗行楷体繁 */
 .two-col-boxes .column:first-child .box:nth-child(2) .main-text {
-  font-family: '王汉宗行楷体繁';
+  font-family: '王汉宗行楷体繁', sans-serif;
 top: -5px; /* 往上 5px (可自行調整) */ 
 }
 
 /* 讓「字型5」的框內 main-text 使用 NotoSansTC-Regular */
 .two-col-boxes .column:first-child .box:nth-child(3) .main-text {
-  font-family: 'NotoSansTC-Regular';
+  font-family: 'NotoSansTC-Regular', sans-serif;
 }
 
 /* 讓「字型7」的框內main-text 使用 王漢宗中圓體繁 */
 .two-col-boxes .column:first-child .box:nth-child(4) .main-text {
-  font-family: '王漢宗中圓體繁';
+  font-family: '王漢宗中圓體繁', sans-serif;
 }
 
 /* 讓「字型9」的框內main-text 使用 Mamelon */
 .two-col-boxes .column:first-child .box:nth-child(5) .main-text {
-  font-family: 'Mamelon';
+  font-family: 'Mamelon', sans-serif;
 }
 
 /* 讓「字型11」的框內 main-text 使用 wt021 */
 .two-col-boxes .column:first-child .box:last-child .main-text {
-  font-family: 'wt021';
+  font-family: 'wt021', sans-serif;
 }
 
 /* 讓「字型2」的框內 main-text 使用 PopGothicCjkTc */
 .two-col-boxes .column:last-child .box:nth-child(1) .main-text {
-  font-family: 'PopGothicCjkTc-Regular';
+  font-family: 'PopGothicCjkTc-Regular', sans-serif;
 } 
 
 /* 讓「字型4」的框內 main-text 使用 edukai-5.0 */
 .two-col-boxes .column:last-child .box:nth-child(2) .main-text {
-  font-family: 'edukai-5.0';
+  font-family: 'edukai-5.0', sans-serif;
 } 
 
 /* 讓「字型6」的框內 main-text 改用 wp010-08 */
 .two-col-boxes .column:last-child .box:nth-child(3) .main-text {
-  font-family: 'wp010-08';
+  font-family: 'wp010-08', sans-serif;
   font-size: 22px;
   font-weight: bold;
 }
 
 /* 讓「字型8」的框內 main-text 使用 KosefontP-JP */
 .two-col-boxes .column:last-child .box:nth-child(4) .main-text {
-  font-family: 'KosefontP-JP';
+  font-family: 'KosefontP-JP', sans-serif;
   font-size: 30px;
 }
 
 /* 讓「字型10」的框內 main-text 使用 宅在家自動筆20231015 */
 .two-col-boxes .column:last-child .box:nth-child(5) .main-text {
-  font-family: '宅在家自動筆20231015'; font-size: 25px;
+  font-family: '宅在家自動筆20231015', sans-serif; font-size: 25px;
 }
 
 /* 讓「字型12」的框內 main-text 改用 BpmfGenSenRounded-M */
 .two-col-boxes .column:last-child .box:last-child .main-text {
-  font-family: 'BpmfGenSenRounded-M';
+  font-family: 'BpmfGenSenRounded-M', sans-serif;
   font-size: 21px;
 }
 
@@ -334,5 +334,3 @@ top: -5px; /* 往上 5px (可自行調整) */
     transform: translate(-25%, -45%);
   }
 }
-
-
